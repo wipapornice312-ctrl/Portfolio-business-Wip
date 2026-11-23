@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Was kochen?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<label for="sprache">Sprache/Language</label>
+<select name="sprache" id="sprache">
+    <option value="de">Deutsch</option>
+    <option value="en">English</option>
+    <option value="thai">ไทย</option>
+    <option value="fr">Français</option>
+    <option value="chinesische">中文</option>
+    <option value="Italienische">Italiano</option>
+    <option value="spanische">Español</option>
+    <optgroup label="Weitere Sprachen">
+        <option value="arabische">العربية</option>
+        <option value="japanische">日本語</option>
+        <option value="russische">Русский</option>
+        <option value="portugiesische">Português</option>
+        <option value="holländische">Nederlands</option>
+        <option value="türkische">Türkçe</option>
+</select>
+<h1>Was kochen?</h1>
+<h2>Unsere Tagesempfehlung</h2>
+<p>Bitte geben Sie die Zutaten aus Ihrem Kühlschrank ein.</p>
+<div>Keine Idee, was Sie kochen möchten? Wir können Ihnen helfen! Geben Sie einfach die Zutaten ein, die Sie zur Verfügung haben, und wir schlagen Ihnen leckere Rezepte vor.</div>
+<textarea id="zutaten" placeholder="z.B. Hähnchen, Reis, Tomaten"></textarea>
+<select id="mahlzeit">
+    <option value="mahlzeit (Alle)">Mahlzeit (Alle)</option>
+    <option value="frühstück">Frühstück</option>
+    <option value="mittagessen">Mittagessen</option>
+    <option value="abendessen">Abendessen</option>
+    <option value="snacks">Snacks</option>
+    <option value="desserts">Desserts</option>
+</select>
+
+<select id="scharf">
+    <option value="">Schärfe (Egal)</option>
+    <option value="scharf">Scharf</option>
+    <option value="nichtScharf">Nicht scharf</option>
+</select>
+<select id="geschmack">
+    <option value="">Geschmack (Egal)</option>
+    <option value="sauer">Sauer</option>
+    <option value="salzig">Salzig</option>
+    <option value="süß">Süß</option>
+</select>
+<select id="vegan">
+    <option value="">Vegan (Egal)</option>
+    <option value="vegan">Vegan</option>
+    <option value="nichtVegan">Nicht vegan</option>
+</select>
+<details>
+    <summary>Erweiterte Filter</summary>
+    <label for="zubereitungszeit">Zubereitungszeit (in Minuten)</label>
+    <input type="number" min="0" id="zubereitungszeit" placeholder="z.B. 30">
+    <label for="kalorien">Kalorien (pro Portion)</label>
+    <input type="number" min="0" id="kalorien" placeholder="z.B. 500">
+    <label for="allergene">Allergene</label>
+    <input type="text" id="allergene" placeholder="z.B. Gluten, Nüsse">
+</details>
+<button onclick="rezeptVorschlag()">Rezept finden</button>
+<!--Platzhalter für die Rezeptausgabe-->
+<div id="ergebnis"></div>
+<script src="script.js"></script>
+</body> 
+</html>
+
+
